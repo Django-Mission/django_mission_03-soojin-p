@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>인덱스</title>
+</head>
+<body>
+<a href="/">새로고침</a>
+<hr>
+<form action="" method="GET">
+    <p>GET Form</p>
+    <input type="text" name="param" value="ProjectLion">
+    <input type="submit" value="GET 제출">
+</form>
+
+<form action="" method="POST">{% csrf_token %}
+    <p>POST Form</p>
+    <input type="text" name="param" value="ProjectLion">
+    <input type="submit" value="POST 제출">
+</form>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for object in object_list %}
+        <p>{{object}}</p> 
+    {% endfor%}
+</body>
+</html> -->
