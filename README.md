@@ -11,21 +11,18 @@ class AnsInline(admin.TabularInline):
 #admin.site.register(Faq)
 @admin.register(Faq)
 class FqaModelAdmin(admin.ModelAdmin):
-    list_display = (
-'title',
-'category',
-    )
-    search_fields = ('title','category')
+    list_display = ('title','category','modified_at',)
+    search_fields = ('title',)
     search_help_text = '카테고리, 작성자, 최종 수정일시 검색'
 
     list_filter = ['category',]
     
 @admin.register(Inquiry)
 class InquiryModelAdmin(admin.ModelAdmin):
-    list_display = ('title','category')
-    search_fields = ('title','email','phone')
+    list_display = ('title','category', 'modified_at','status')
+    search_fields = ('title','email','phone',)
     search_help_text = '제목, 이메일, 전화번호 검색'
-    list_filter = ['category',]
+    list_filter = ['category','status',]
     
     inlines = [AnsInline]
 
